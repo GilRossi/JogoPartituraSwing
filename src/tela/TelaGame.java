@@ -71,10 +71,10 @@ public class TelaGame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblTexto = new JLabel("<html>Clique em <b>Tocar</b> para ver a partitura. Depois <b>clique na nota</b> referente a partitura. Na clave de G (Sol)<html>");
+		JLabel lblTexto = new JLabel("<html>Clique em <b>Tocar</b> para ver a partitura. Depois <b>clique na nota</b> referente a partitura. <br>Na clave de G (Sol)<html>");
 		lblTexto.setForeground(new Color(103, 64, 37));
 		lblTexto.setFont(new Font("Dialog", Font.PLAIN, 26));
-		lblTexto.setBounds(12, 22, 358, 108);
+		lblTexto.setBounds(12, 22, 358, 146);
 		contentPane.add(lblTexto);
 		
 		JLabel lblViolao = new JLabel("New label");
