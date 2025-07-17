@@ -39,6 +39,7 @@ public class TelaGame extends JFrame {
 	private JButton btnFa;
 	private JButton btnSol;
 	private JLabel lblPartitura;
+	private JLabel lblClave;
 
 
 
@@ -253,7 +254,7 @@ public class TelaGame extends JFrame {
 				resetarBotoes();
 				
 				partitura = 1 + (int) (Math.random() * 16);
-				lblPartitura.setText(String.valueOf(partitura));;
+				lblPartitura.setText(String.valueOf(partitura));
 				
 				//Habiliar os botões
 				btnLa.setEnabled(true);
@@ -264,114 +265,117 @@ public class TelaGame extends JFrame {
 				btnFa.setEnabled(true);
 				btnSol.setEnabled(true);
 				
+				//Imagem da partitura
+				lblClave.setVisible(true);
+				
 				//Imagem das partituras
 				switch(partitura) {
 				case 1:
 					ImageIcon gepartituraIcon1 = new ImageIcon(getClass().getResource("/tela/resources/images/fa1.png"));
-					Image partituraImg1 = gepartituraIcon1.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg1 = gepartituraIcon1.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg1));
 					
 					break;
 					
 				case 2:
 					ImageIcon gepartituraIcon2 = new ImageIcon(getClass().getResource("/tela/resources/images/mi2.png"));
-					Image partituraImg2 = gepartituraIcon2.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg2 = gepartituraIcon2.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg2));
 					
 					break;
 					
 				case 3:
 					ImageIcon gepartituraIcon3 = new ImageIcon(getClass().getResource("/tela/resources/images/re3.png"));
-					Image partituraImg3 = gepartituraIcon3.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg3 = gepartituraIcon3.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg3));
 					
 					break;
 					
 				case 4:
 					ImageIcon gepartituraIcon4 = new ImageIcon(getClass().getResource("/tela/resources/images/do4.png"));
-					Image partituraImg4 = gepartituraIcon4.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg4 = gepartituraIcon4.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg4));
 					
 					break;
 					
 				case 5:
 					ImageIcon gepartituraIcon5 = new ImageIcon(getClass().getResource("/tela/resources/images/si5.png"));
-					Image partituraImg5 = gepartituraIcon5.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg5 = gepartituraIcon5.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg5));
 					
 					break;
 					
 				case 6:
 					ImageIcon gepartituraIcon6 = new ImageIcon(getClass().getResource("/tela/resources/images/la6.png"));
-					Image partituraImg6 = gepartituraIcon6.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg6 = gepartituraIcon6.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg6));
 					
 					break;
 					
 				case 7:
 					ImageIcon gepartituraIcon7 = new ImageIcon(getClass().getResource("/tela/resources/images/sol7.png"));
-					Image partituraImg7 = gepartituraIcon7.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg7 = gepartituraIcon7.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg7));
 					
 					break;
 					
 				case 8:
 					ImageIcon gepartituraIcon8 = new ImageIcon(getClass().getResource("/tela/resources/images/fa8.png"));
-					Image partituraImg8 = gepartituraIcon8.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg8 = gepartituraIcon8.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg8));
 					
 					break;
 					
 				case 9:
 					ImageIcon gepartituraIcon9 = new ImageIcon(getClass().getResource("/tela/resources/images/mi9.png"));
-					Image partituraImg9 = gepartituraIcon9.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg9 = gepartituraIcon9.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg9));
 					
 					break;
 					
 				case 10:
 					ImageIcon gepartituraIcon10 = new ImageIcon(getClass().getResource("/tela/resources/images/re10.png"));
-					Image partituraImg10 = gepartituraIcon10.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg10 = gepartituraIcon10.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg10));
 					
 				case 11:
 					ImageIcon gepartituraIcon11 = new ImageIcon(getClass().getResource("/tela/resources/images/do11.png"));
-					Image partituraImg11 = gepartituraIcon11.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg11 = gepartituraIcon11.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg11));
 					
 					break;
 					
 				case 12:
 					ImageIcon gepartituraIcon12 = new ImageIcon(getClass().getResource("/tela/resources/images/si12.png"));
-					Image partituraImg12 = gepartituraIcon12.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg12 = gepartituraIcon12.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg12));
 					
 					break;
 					
 				case 13:
 					ImageIcon gepartituraIcon13 = new ImageIcon(getClass().getResource("/tela/resources/images/la13.png"));
-					Image partituraImg13 = gepartituraIcon13.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg13 = gepartituraIcon13.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg13));
 					
 					break;
 					
 				case 14:
 					ImageIcon gepartituraIcon14 = new ImageIcon(getClass().getResource("/tela/resources/images/sol14.png"));
-					Image partituraImg14 = gepartituraIcon14.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg14 = gepartituraIcon14.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg14));
 					
 					break;
 					
 				case 15:
 					ImageIcon partituraIcon15 = new ImageIcon(getClass().getResource("/tela/resources/images/fa15.png"));
-					Image partituraImg15 = partituraIcon15.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg15 = partituraIcon15.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg15));
 					
 					break;
 					
 				case 16:
 					ImageIcon gepartituraIcon16 = new ImageIcon(getClass().getResource("/tela/resources/images/mi16.png"));
-					Image partituraImg16 = gepartituraIcon16.getImage().getScaledInstance(90, 110, Image.SCALE_SMOOTH);
+					Image partituraImg16 = gepartituraIcon16.getImage().getScaledInstance(45, 110, Image.SCALE_SMOOTH);
 					lblPartitura.setIcon(new ImageIcon(partituraImg16));
 					
 					break;
@@ -384,8 +388,16 @@ public class TelaGame extends JFrame {
 		btnTocar.setBackground(new Color(255, 194, 50));
 		btnTocar.setForeground(new Color(103, 64, 37));
 		btnTocar.setBounds(608, 19, 180, 38);
-		contentPane.add(btnTocar);		
+		contentPane.add(btnTocar);
 		
+		//Colocar a clave
+		lblClave = new JLabel();
+		ImageIcon partituraIconClave = new ImageIcon(getClass().getResource("/tela/resources/images/claveSol.png"));
+		Image partituraImgClave = partituraIconClave.getImage().getScaledInstance(65, 91, Image.SCALE_SMOOTH);
+		lblClave.setIcon(new ImageIcon(partituraImgClave));		
+		lblClave.setBounds(530, 22, 60, 92);
+		contentPane.add(lblClave);
+		lblClave.setVisible(false);
 		
 		setTitle("Jogo de Partituras");
 
@@ -409,6 +421,4 @@ public class TelaGame extends JFrame {
 			botao.setForeground(corOriginalTexto);
 		}
 	}
-
-
 }
