@@ -85,7 +85,7 @@ public class TelaGame extends JFrame {
 		
 		lblPartitura = new JLabel();		
 		lblPartitura.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPartitura.setBounds(388, 22, 122, 92);
+		lblPartitura.setBounds(388, 22, 122, 146);
 		contentPane.add(lblPartitura);
 		
 		btnLa = new JButton("A = LÁ");
@@ -253,8 +253,12 @@ public class TelaGame extends JFrame {
 				
 				resetarBotoes();
 				
+				//Número randomico para atribuir a uma nota
 				partitura = 1 + (int) (Math.random() * 16);
+				
+				/*Valor do número para imprimir na tela
 				lblPartitura.setText(String.valueOf(partitura));
+				*/
 				
 				//Habiliar os botões
 				btnLa.setEnabled(true);
