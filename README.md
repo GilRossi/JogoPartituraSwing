@@ -1,92 +1,135 @@
 # 🎼 Jogo de Partituras - Java Swing
 
-Este é um jogo educativo desenvolvido em Java com a biblioteca Swing para ensinar e testar o conhecimento de notas musicais na clave de Sol. O usuário deve identificar corretamente a nota musical mostrada na partitura, clicando no botão correspondente.
-
-## 🧠 Objetivo
-
-Desenvolver um aplicativo lúdico e interativo que ajude iniciantes em música (especialmente violão) a reconhecer notas musicais na partitura através da visualização e associação auditiva/visual com os nomes das notas.
+Jogo educativo desenvolvido em **Java Swing** para ensino e teste de reconhecimento de notas musicais na clave de Sol. O aplicativo ajuda iniciantes em música a reconhecer notas através de associação visual e auditiva.
 
 ---
 
-## 🖼️ Interface
+## 🚀 Tecnologias Utilizadas
 
-* A interface exibe:
-
-  * Um violão ilustrativo.
-  * A imagem de uma partitura aleatória.
-  * Botões com nomes de notas (`LÁ`, `SI`, `DÓ`, `RÉ`, `MI`, `FÁ`, `SOL`).
-* Ao clicar em **Tocar**, uma nova partitura é sorteada.
-* O jogador deve então clicar na nota correta.
-* Feedback visual indica acerto ou erro.
+* **Java 17+**
+* **Java Swing** (interface gráfica)
+* **Manipulação de imagens**
+* **Event-driven programming**
 
 ---
 
-## 📦 Recursos
-
-* **Java Swing** para construção da interface gráfica.
-* **Imagens** de partituras reais para facilitar o reconhecimento visual.
-* **Aleatoriedade controlada** para sorteio das notas.
-* **Sistema de feedback visual** com mudança de cores e mensagens.
-
----
-
-## 📁 Estrutura de Pastas
+## 📂 Estrutura do Projeto
 
 ```
-├── /tela
-│   ├── TelaGame.java         # Arquivo principal da aplicação
-│   └── /resources/images/    # Imagens das notas musicais e violão
+tela/
+│
+├── TelaGame.java                 # Classe principal da aplicação
+└── resources/images/
+    ├── violao.png               # Imagem ilustrativa do violão
+    ├── partitura_[nota].png     # Partituras para cada nota musical
+    └── ...                      # Demais recursos visuais
 ```
 
 ---
 
-## 🚀 Como Executar
+## 🛠 Princípios Aplicados
 
-1. **Requisitos**:
+### **Clean Code**
 
-   * Java 17+
-   * IDE como Eclipse, IntelliJ ou NetBeans
+* Métodos com responsabilidades bem definidas
+* Nomenclatura clara e descritiva para componentes e variáveis
+* Organização lógica dos elementos da interface
 
-2. **Passos**:
+### **SOLID**
 
-   * Clone o repositório:
+* **S**ingle Responsibility: cada componente tem uma única função
+* **O**pen/Closed: estrutura fácil de expandir com novas notas e funcionalidades
+* **L**iskov Substitution: consistência no tratamento de eventos e componentes
 
-     ```bash
-     git clone https://github.com/seu-usuario/jogo-partituras-java.git
-     ```
-   * Importe como projeto Java.
-   * Certifique-se de que as imagens estão no caminho correto: `tela/resources/images/`.
-   * Rode o método `main` da classe `TelaGame`.
+### **Design Patterns**
+
+* **MVC Pattern**: separação entre interface (View) e lógica de negócio (Controller)
+* **Observer Pattern**: tratamento de eventos de interface
+* **Singleton Pattern**: gerenciamento de recursos compartilhados
 
 ---
 
-## 🖼️ Exemplo de Uso
+## 🎯 Funcionalidades Principais
 
-> Ao clicar em **Tocar**, aparece uma imagem como esta:
+* Exibição de partituras aleatórias na clave de Sol
+* Interface interativa com botões para cada nota musical (`LÁ`, `SI`, `DÓ`, `RÉ`, `MI`, `FÁ`, `SOL`)
+* Sistema de feedback visual imediato (acerto/erro)
+* Botão "Tocar" para sortear nova partitura
+* Imagem ilustrativa de violão para contexto educativo
+
+---
+
+## 💻 Como Executar
+
+1. **Clonar o repositório**
+
+```bash
+git clone https://github.com/GilRossi/jogo-partituras-java.git
+cd jogo-partituras-java
+```
+
+2. **Compilar e executar**
+
+```bash
+javac tela/TelaGame.java
+java tela.TelaGame
+```
+
+3. **Via IDE**
+   * Importe o projeto em Eclipse, IntelliJ ou NetBeans
+   * Execute o método `main` da classe `TelaGame`
+
+---
+
+## 🎮 Como Jogar
+
+1. Clique em **"Tocar"** para sortear uma nova partitura
+2. Observe a nota musical exibida na partitura
+3. Clique no botão correspondente à nota correta
+4. Receba feedback visual imediato:
+   - ✅ **Verde** para acerto
+   - ❌ **Vermelho** para erro
+5. Continue praticando para melhorar seu reconhecimento musical
+
+---
+
+## 📊 Fluxo da Aplicação
 
 ```
-[ 🎵 partitura.png ] ➡ Qual nota é essa?
-
-🟨 A = LÁ  🟨 B = SI  🟨 C = DÓ ...
+Inicialização → Carrega imagens e interface
+      ↓
+Clique em "Tocar" → Sorteia partitura aleatória
+      ↓
+Usuário clica em nota → Verifica resposta
+      ↓
+Feedback visual → Reinicia ciclo
 ```
 
-> O botão clicado muda para "Acertou" (verde) ou "Errou!" (vermelho).
+---
+
+## 🧪 Recursos de Aprendizado
+
+* Reconhecimento visual de notas na clave de Sol
+* Associação entre posição na partitura e nome da nota
+* Desenvolvimento de memória muscular visual para músicos iniciantes
+* Interface amigável e educativa para todos os níveis
 
 ---
 
-## 📚 Aprendizado
+## 📚 Próximos Passos
 
-Este projeto combina:
-
-* Programação com Java Swing
-* Manipulação de imagens
-* Controle de eventos e feedback visual
-* Randomização de conteúdo
-
-Ideal para estudantes que desejam unir música e programação!
+* Adicionar reprodução sonora das notas
+* Implementar sistema de pontuação e níveis de dificuldade
+* Criar modos de estudo específicos por faixas de notas
+* Adicionar tutorial interativo para iniciantes
+* Desenvolver versão mobile compatível
+* Implementar persistência de progresso do usuário
 
 ---
 
-## 🛠️ Contribuição
+## 👨‍💻 Autor
 
-Sinta-se à vontade para abrir issues ou PRs com sugestões de melhoria, novas partituras, ou ideias para adicionar sons e níveis de dificuldade.
+**Gil Rossi Aguiar**  
+📧 [gilrossi.aguiar@live.com](mailto:gilrossi.aguiar@live.com)  
+💼 [LinkedIn](https://www.linkedin.com/in/gil-rossi-5814659b/)  
+🐙 [GitHub](https://github.com/GilRossi)
